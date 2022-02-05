@@ -3,12 +3,12 @@ kind: Namespace
 metadata:
   name: hackathon-api2
 ---
-# apiVersion: v1
-# kind: ServiceAccount
-# metadata:
-#   name: hackathon-api2-user
-#   namespace: hackathon-api2
-# ---
+ apiVersion: v1
+ kind: ServiceAccount
+ metadata:
+   name: hackathon-api2-user
+   namespace: hackathon-api2
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
