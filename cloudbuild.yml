@@ -5,5 +5,3 @@ steps:
   - name: 'docker'
     args: ['push', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}']
 
-# images:
-#   - 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMAGE}'
