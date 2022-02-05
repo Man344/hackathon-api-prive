@@ -1,7 +1,8 @@
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'https://github.com/Man344/hackathon-api-prive.git', '.']
-- name: 'gcr.io/cloud-builders/docker'
+  - name: 'toto'  
+    entrypoint: docker
+    args: ['build','--build-arg','TARGETOS=${_TARGETOS}','--build-arg','TARGETARCH=${_TARGETARCH}','-t', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}', '-f', 'Dockerfile', '.' ]
+  - name: 'titi'
     args: ['push', 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0/${_REPOSITORY}/${_IMG}']
 
 # images:
