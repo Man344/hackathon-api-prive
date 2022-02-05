@@ -1,9 +1,9 @@
 steps:
-  - name: 'gcr.io/cloud-builders/docker'  
+  - name: 'toto'  
     entrypoint: docker
     args: ['build','--build-arg','TARGETOS=${_TARGETOS}','--build-arg','TARGETARCH=${_TARGETARCH}','-t', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}', '-f', 'Dockerfile', '.' ]
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['push', 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMG}']
+  - name: 'titi'
+    args: ['push', 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0/${_REPOSITORY}/${_IMG}']
 
 # images:
 #   - 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMAGE}'
