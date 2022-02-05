@@ -63,7 +63,7 @@ metadata:
     cloud.google.com/neg: '{"ingress": true}'
   labels:
     app: hackathon-api2
-  spec:
+spec:
     selector:
       app: hackathon-api2
     type: LoadBalancer
