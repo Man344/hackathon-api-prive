@@ -1,10 +1,5 @@
 steps:
   - name: 'gcr.io/cloud-builders/docker'  
-    env:
-     - 'REPO=${_REPO}'     
-     - 'IMAGE=${_IMAGE}'     
-     - 'TAG=${_TAG}'
-     - 'DOCKER_REPO=${_DOCKER_REPO}'
-    args: [ 'build', '-t', '"$(DOCKER_REPO)/$(IMAGE):$(TAG)"', '-f', 'Dockerfile', '.' ]
+    args: [ 'build', '-t', '"${_DOCKER_REPO}/${_IMAGE}:${_TAG}"', '-f', 'Dockerfile', '.' ]
 images:
   - 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMAGE}'
