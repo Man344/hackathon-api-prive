@@ -1,8 +1,8 @@
 steps:
-  - name: 'toto'  
+  - name: 'docker'  
     entrypoint: docker
     args: ['build','--build-arg','TARGETOS=${_TARGETOS}','--build-arg','TARGETARCH=${_TARGETARCH}','-t', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}', '-f', 'Dockerfile', '.' ]
-  - name: 'titi'
+  - name: 'docker'
     args: ['push', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}']
 
 # images:
