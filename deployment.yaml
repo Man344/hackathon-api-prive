@@ -64,11 +64,11 @@ metadata:
   labels:
     app: hackathon-api2
   spec:
-  type: LoadBalancer
-  ports:
-    # the port that this service should serve on
-    - port: 80
-      protocol: TCP
-      targetPort: 80
-  selector:
-    app: hackathon-api2
+    selector:
+      app: hackathon-api2
+    type: LoadBalancer
+    ports:
+      # the port that this service should serve on
+      - port: 80
+        protocol: TCP
+        targetPort: 80
