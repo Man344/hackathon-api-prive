@@ -3,8 +3,7 @@ steps:
     entrypoint: docker
     args: ['build','--build-arg','TARGETOS=${_TARGETOS}','--build-arg','TARGETARCH=${_TARGETARCH}','-t', '${_DOCKER_REPO}/${_IMAGE}:${_TAG}', '-f', 'Dockerfile', '.' ]
   - name: 'gcr.io/cloud-builders/docker'
-    env: ['IMG=${_DOCKER_REPO}/${_IMAGE}:${_TAG}']
-    args: ['push', 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${IMG}']
+    args: ['push', 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMG}']
 
 # images:
 #   - 'europe-west1-docker.pkg.dev/cagip-hackathon-eq11-inn0-28/${_REPOSITORY}/${_IMAGE}'
