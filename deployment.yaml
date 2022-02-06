@@ -47,7 +47,7 @@ spec:
               scheme: HTTP
               port: 80
             initialDelaySeconds: 60
-            timeoutSeconds: 5
+            timeoutSeconds: 60
           resources:
             requests:
               memory: 500Mi
