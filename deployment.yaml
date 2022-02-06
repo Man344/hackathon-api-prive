@@ -67,4 +67,4 @@ spec:
       # the port that this service should serve on
       - port: 80
         protocol: TCP
-        targetPort: 80
+        targetPort: 8080
