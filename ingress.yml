@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: api
-  namespace: fuse
+  namespace: hackathon-api2
   labels:
     app: api
   annotations:
