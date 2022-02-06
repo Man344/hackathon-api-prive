@@ -40,9 +40,7 @@ spec:
               port: 8080
             initialDelaySeconds: 10
           readinessProbe:
-            httpGet:
-              path: /statistics
-              scheme: HTTP
+            tcpSocket:
               port: 8080
             initialDelaySeconds: 10
             timeoutSeconds: 10
