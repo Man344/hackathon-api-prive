@@ -36,9 +36,7 @@ spec:
               value: mongodb://10.28.1.7:27017/donation?retryWrites=true&w=majority
           livenessProbe:
             failureThreshold: 3
-            tcpGet:
-              path: /statistics
-              scheme: HTTP
+            tcpSocket:
               port: 8080
             initialDelaySeconds: 10
           readinessProbe:
