@@ -40,14 +40,14 @@ spec:
               path: /statistics
               scheme: HTTP
               port: 8080
-            initialDelaySeconds: 60
+            initialDelaySeconds: 10
           readinessProbe:
             httpGet:
               path: /statistics
               scheme: HTTP
               port: 8080
-            initialDelaySeconds: 60
-            timeoutSeconds: 60
+            initialDelaySeconds: 10
+            timeoutSeconds: 10
           resources:
             requests:
               memory: 500Mi
